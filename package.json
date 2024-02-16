@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --no-timeouts --recursive --parallel"
+    "test": "mocha --no-timeouts --recursive --parallel --reporter mochawesome --require mochawesome/register --reporter-options reportFilename=testResults"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "mocha": "^10.3.0",
+    "mochawesome": "^7.1.3",
     "selenium-webdriver": "^4.17.0"
   }
 }
