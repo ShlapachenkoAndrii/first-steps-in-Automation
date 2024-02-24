@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 10,
-    "tests": 10,
-    "passes": 10,
+    "suites": 11,
+    "tests": 16,
+    "passes": 15,
     "pending": 0,
-    "failures": 0,
-    "start": "2024-02-16T15:58:08.089Z",
-    "end": "2024-02-16T15:58:11.986Z",
-    "duration": 3897,
-    "testsRegistered": 10,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2024-02-24T13:43:10.679Z",
+    "end": "2024-02-24T13:43:27.884Z",
+    "duration": 17205,
+    "testsRegistered": 16,
+    "passPercent": 93.75,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "29099290-b32d-481d-b839-571912a6ea99",
+      "uuid": "b693d49a-803f-4cf2-b1cd-fb0407ae8efe",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,46 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4fe50e95-cdb9-4199-a8c6-1dc4adb26fc5",
-          "title": "Login page tests",
-          "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test2 - login with empty username and password.js",
-          "file": "\\test\\Login page tests\\test2 - login with empty username and password.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "login with empty username and password",
-              "fullTitle": "Login page tests login with empty username and password",
-              "timedOut": null,
-              "duration": 2339,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n//click Login button\nawait driver.findElement(By.id(\"login-button\")).click();\n\n//----Assertions----\n//--Assert1: Error is displayed with text \"Epic sadface: Username is required\"\nconst EXPECTED_ERROR = \"Epic sadface: Username is required\";\nconst ACTUAL_ERROR_TEXT = await driver.findElement(By.css('[data-test=\"error\"]')).getText();\nassert.strictEqual(ACTUAL_ERROR_TEXT, EXPECTED_ERROR);\n//close browser\nawait driver.quit();",
-              "err": {},
-              "uuid": "31ae9877-665f-45bf-bd2a-d74f9b24ef2e",
-              "parentUUID": null,
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "31ae9877-665f-45bf-bd2a-d74f9b24ef2e"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 2339,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": null
-        },
-        {
-          "uuid": "1dcf18ff-7655-4a0f-82aa-8f172f17347a",
+          "uuid": "14ab62a5-1520-4b8e-955d-118bfb027869",
           "title": "Login page tests",
           "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test10 - homepage loads in less than 2s.js",
           "file": "\\test\\Login page tests\\test10 - homepage loads in less than 2s.js",
@@ -77,7 +38,7 @@
               "title": "homepage loads in less than 2sec",
               "fullTitle": "Login page tests homepage loads in less than 2sec",
               "timedOut": null,
-              "duration": 2654,
+              "duration": 3490,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -86,7 +47,7 @@
               "context": null,
               "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//start timer to capture the load time \nconst startTime = new Date().getTime();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n//----Assertions----\n//--Assert1: homepage load time is <2 sec\n//wait till page is loaded, capture time, calculate load time\nawait driver.wait(until.elementLocated(By.css('body')));\nconst endTime = new Date().getTime();\nconst pageLoadTime = endTime - startTime;\n//assert that page loads faster than 2 secs\nif (pageLoadTime <= 2000) {\n} else {\n  throw new Error('Page took longer than 2 seconds to load.');\n}\n\n//close browser\nawait driver.quit();",
               "err": {},
-              "uuid": "4400e2ec-a74f-4cab-8223-0c3a851cb980",
+              "uuid": "d65890ba-c9cc-4909-848b-525961c44d24",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -94,38 +55,38 @@
           ],
           "suites": [],
           "passes": [
-            "4400e2ec-a74f-4cab-8223-0c3a851cb980"
+            "d65890ba-c9cc-4909-848b-525961c44d24"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2654,
+          "duration": 3490,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
         },
         {
-          "uuid": "8ca2966c-aef5-4d62-aa0b-5d3e1f7855cb",
+          "uuid": "8aa4491f-53df-4c31-81e2-d0b1178972c3",
           "title": "Login page tests",
-          "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test6 - login pass doesn't match.js",
-          "file": "\\test\\Login page tests\\test6 - login pass doesn't match.js",
+          "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test2 - login with empty username and password.js",
+          "file": "\\test\\Login page tests\\test2 - login with empty username and password.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "login with pass doesn't match username",
-              "fullTitle": "Login page tests login with pass doesn't match username",
+              "title": "login with empty username and password",
+              "fullTitle": "Login page tests login with empty username and password",
               "timedOut": null,
-              "duration": 2644,
+              "duration": 3753,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n// input existing Username and non-existent Pass\nawait driver.findElement(By.id(\"user-name\")).sendKeys(\"standard_user\");\nawait driver.findElement(By.id(\"password\")).sendKeys(\"non-existent pass\");\n//click Login button\nawait driver.findElement(By.id(\"login-button\")).click();\n\n//----Assertions----\n//--Assert1: Error is displayed with text \"Epic sadface: Username and password do not match any user in this service\"\nconst EXPECTED_ERROR = \"Epic sadface: Username and password do not match any user in this service\";\nconst ACTUAL_ERROR = await driver.findElement(By.css('[data-test=\"error\"]')).getText();\nassert.strictEqual(ACTUAL_ERROR, EXPECTED_ERROR);\n//close browser\nawait driver.quit();",
+              "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n//click Login button\nawait driver.findElement(By.id(\"login-button\")).click();\n\n//----Assertions----\n//--Assert1: Error is displayed with text \"Epic sadface: Username is required\"\nconst EXPECTED_ERROR = \"Epic sadface: Username is required\";\nconst ACTUAL_ERROR_TEXT = await driver.findElement(By.css('[data-test=\"error\"]')).getText();\nassert.strictEqual(ACTUAL_ERROR_TEXT, EXPECTED_ERROR);\n//close browser\nawait driver.quit();",
               "err": {},
-              "uuid": "bded7027-d9eb-46d5-9e31-68712e890cde",
+              "uuid": "f219c924-56ce-4e3d-b44c-fd61a0b53552",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -133,174 +94,18 @@
           ],
           "suites": [],
           "passes": [
-            "bded7027-d9eb-46d5-9e31-68712e890cde"
+            "f219c924-56ce-4e3d-b44c-fd61a0b53552"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2644,
+          "duration": 3753,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
         },
         {
-          "uuid": "194f9204-bfd2-4773-a550-7d05a01c0d9a",
-          "title": "Login page tests",
-          "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test5 - login username does not exist.js",
-          "file": "\\test\\Login page tests\\test5 - login username does not exist.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "login with non-existent username and existing pass",
-              "fullTitle": "Login page tests login with non-existent username and existing pass",
-              "timedOut": null,
-              "duration": 2777,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n// input non-existent Username and existing Pass\nawait driver.findElement(By.id(\"user-name\")).sendKeys(\"non-existent username\");\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\");\n//click Login button\nawait driver.findElement(By.id(\"login-button\")).click();\n\n//----Assertions----\n//--Assert1: Error is displayed with text \"Epic sadface: Username and password do not match any user in this service\"\nconst EXPECTED_ERROR = \"Epic sadface: Username and password do not match any user in this service\";\nconst ACTUAL_ERROR = await driver.findElement(By.css('[data-test=\"error\"]')).getText();\nassert.strictEqual(ACTUAL_ERROR, EXPECTED_ERROR);\n//close browser\nawait driver.quit();",
-              "err": {},
-              "uuid": "42aa2264-8a02-4eb2-879f-7481a8f721ce",
-              "parentUUID": null,
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "42aa2264-8a02-4eb2-879f-7481a8f721ce"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 2777,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": null
-        },
-        {
-          "uuid": "60023232-8a22-4f35-964f-5dea73f8867b",
-          "title": "Login page tests",
-          "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test4 - login with empty password.js",
-          "file": "\\test\\Login page tests\\test4 - login with empty password.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "login with empty password",
-              "fullTitle": "Login page tests login with empty password",
-              "timedOut": null,
-              "duration": 2889,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n// input valid Username \nawait driver.findElement(By.id(\"user-name\")).sendKeys(\"standard_user\");\n//click Login button\nawait driver.findElement(By.id(\"login-button\")).click();\n\n//----Assertions----\n//--Assert1: Error is displayed with text \"Epic sadface: Password is required\"\nconst EXPECTED_ERROR = \"Epic sadface: Password is required\";\nconst ACTUAL_ERROR = await driver.findElement(By.css('[data-test=\"error\"]')).getText();\nassert.strictEqual(ACTUAL_ERROR, EXPECTED_ERROR);\n//close browser\nawait driver.quit();",
-              "err": {},
-              "uuid": "c2270dc1-acfc-4f81-ba03-16ee8a1e06d3",
-              "parentUUID": null,
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "c2270dc1-acfc-4f81-ba03-16ee8a1e06d3"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 2889,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": null
-        },
-        {
-          "uuid": "6bf1811f-b74e-4ee5-a115-8c41dee518b1",
-          "title": "Login page tests",
-          "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test8 - username field is case sensitive.js",
-          "file": "\\test\\Login page tests\\test8 - username field is case sensitive.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "username is case sensitive",
-              "fullTitle": "Login page tests username is case sensitive",
-              "timedOut": null,
-              "duration": 2908,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n// input Username and Pass\nawait driver.findElement(By.id(\"user-name\")).sendKeys(\"standard_useR\");\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\");\n//click Login button\nawait driver.findElement(By.id(\"login-button\")).click();\n//----Assertions----\n//--Assert1: URL is not changed\nconst EXPECTED_URL = \"https://www.saucedemo.com/\";\nconst ACTUAL_URL = await driver.getCurrentUrl();\nassert.strictEqual(ACTUAL_URL, EXPECTED_URL);\n//close browser\nawait driver.quit();",
-              "err": {},
-              "uuid": "1243bb4c-0765-42a3-81d0-03fae5e7207f",
-              "parentUUID": null,
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "1243bb4c-0765-42a3-81d0-03fae5e7207f"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 2908,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": null
-        },
-        {
-          "uuid": "2a329213-4c0f-40ed-be4b-e44df30259fd",
-          "title": "Login page tests",
-          "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test3 - login with empty username .js",
-          "file": "\\test\\Login page tests\\test3 - login with empty username .js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "login with empty username",
-              "fullTitle": "Login page tests login with empty username",
-              "timedOut": null,
-              "duration": 2989,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n// input valid Pass\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\");\n//click Login button\nawait driver.findElement(By.id(\"login-button\")).click();\n\n//----Assertions----\n//--Assert1: Error is displayed with text \"Epic sadface: Username is required\"\nconst EXPECTED_ERROR = \"Epic sadface: Username is required\";\nconst ACTUAL_ERROR_TEXT = await driver.findElement(By.css('[data-test=\"error\"]')).getText();\nassert.strictEqual(ACTUAL_ERROR_TEXT, EXPECTED_ERROR);\n//close browser\nawait driver.quit();",
-              "err": {},
-              "uuid": "1968e76f-b960-4ff7-820a-8aed1b8e6072",
-              "parentUUID": null,
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "1968e76f-b960-4ff7-820a-8aed1b8e6072"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 2989,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": null
-        },
-        {
-          "uuid": "70833712-9c41-4783-8a38-3ca91259feba",
+          "uuid": "aa5ffb76-3845-471f-9bc8-06023c154a78",
           "title": "Login page tests",
           "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test1 - login with standard user.js",
           "file": "\\test\\Login page tests\\test1 - login with standard user.js",
@@ -311,7 +116,7 @@
               "title": "login with standard user",
               "fullTitle": "Login page tests login with standard user",
               "timedOut": null,
-              "duration": 3187,
+              "duration": 3929,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -320,7 +125,7 @@
               "context": null,
               "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n// input valid Username and Pass\nawait driver.findElement(By.id(\"user-name\")).sendKeys(\"standard_user\");\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\");\n//click Login button\nawait driver.findElement(By.id(\"login-button\")).click();\n//----Assertions----\n//--Assert1: URL after logging in is changed\nconst EXPECTED_URL = \"https://www.saucedemo.com/inventory.html\";\nconst ACTUAL_URL = await driver.getCurrentUrl();\nassert.strictEqual(ACTUAL_URL, EXPECTED_URL);\n//close browser\nawait driver.quit();",
               "err": {},
-              "uuid": "93ae8cd3-d7a1-44db-8ca0-ca4141b24c6b",
+              "uuid": "d3629633-d542-4e9e-8ee7-3187213ebe72",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -328,18 +133,213 @@
           ],
           "suites": [],
           "passes": [
-            "93ae8cd3-d7a1-44db-8ca0-ca4141b24c6b"
+            "d3629633-d542-4e9e-8ee7-3187213ebe72"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3187,
+          "duration": 3929,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
         },
         {
-          "uuid": "67e0c911-a039-4536-8c1b-8b9e3320eb53",
+          "uuid": "740538f7-d422-4fb8-8b80-a6bfd8cb5e24",
+          "title": "Login page tests",
+          "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test8 - username field is case sensitive.js",
+          "file": "\\test\\Login page tests\\test8 - username field is case sensitive.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "username is case sensitive",
+              "fullTitle": "Login page tests username is case sensitive",
+              "timedOut": null,
+              "duration": 3929,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n// input Username and Pass\nawait driver.findElement(By.id(\"user-name\")).sendKeys(\"standard_useR\");\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\");\n//click Login button\nawait driver.findElement(By.id(\"login-button\")).click();\n//----Assertions----\n//--Assert1: URL is not changed\nconst EXPECTED_URL = \"https://www.saucedemo.com/\";\nconst ACTUAL_URL = await driver.getCurrentUrl();\nassert.strictEqual(ACTUAL_URL, EXPECTED_URL);\n//close browser\nawait driver.quit();",
+              "err": {},
+              "uuid": "18b547ba-c246-4d27-b7c1-1f27fcd932e3",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "18b547ba-c246-4d27-b7c1-1f27fcd932e3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3929,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "d2f916b1-52c3-4308-bee9-2b98b813e151",
+          "title": "Login page tests",
+          "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test3 - login with empty username .js",
+          "file": "\\test\\Login page tests\\test3 - login with empty username .js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login with empty username",
+              "fullTitle": "Login page tests login with empty username",
+              "timedOut": null,
+              "duration": 4036,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n// input valid Pass\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\");\n//click Login button\nawait driver.findElement(By.id(\"login-button\")).click();\n\n//----Assertions----\n//--Assert1: Error is displayed with text \"Epic sadface: Username is required\"\nconst EXPECTED_ERROR = \"Epic sadface: Username is required\";\nconst ACTUAL_ERROR_TEXT = await driver.findElement(By.css('[data-test=\"error\"]')).getText();\nassert.strictEqual(ACTUAL_ERROR_TEXT, EXPECTED_ERROR);\n//close browser\nawait driver.quit();",
+              "err": {},
+              "uuid": "026c3579-92ca-4358-af57-a68fdda1cf7c",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "026c3579-92ca-4358-af57-a68fdda1cf7c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4036,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "f4e5bf45-df48-450c-9bca-7fbab8ea9deb",
+          "title": "Login page tests",
+          "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test4 - login with empty password.js",
+          "file": "\\test\\Login page tests\\test4 - login with empty password.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login with empty password",
+              "fullTitle": "Login page tests login with empty password",
+              "timedOut": null,
+              "duration": 4045,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n// input valid Username \nawait driver.findElement(By.id(\"user-name\")).sendKeys(\"standard_user\");\n//click Login button\nawait driver.findElement(By.id(\"login-button\")).click();\n\n//----Assertions----\n//--Assert1: Error is displayed with text \"Epic sadface: Password is required\"\nconst EXPECTED_ERROR = \"Epic sadface: Password is required\";\nconst ACTUAL_ERROR = await driver.findElement(By.css('[data-test=\"error\"]')).getText();\nassert.strictEqual(ACTUAL_ERROR, EXPECTED_ERROR);\n//close browser\nawait driver.quit();",
+              "err": {},
+              "uuid": "74c3c607-4258-4201-92b1-a94e5bff1625",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "74c3c607-4258-4201-92b1-a94e5bff1625"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4045,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "6ec23077-2d15-4c61-8d96-827e50ab6457",
+          "title": "Login page tests",
+          "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test6 - login pass doesn't match.js",
+          "file": "\\test\\Login page tests\\test6 - login pass doesn't match.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login with pass doesn't match username",
+              "fullTitle": "Login page tests login with pass doesn't match username",
+              "timedOut": null,
+              "duration": 4090,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n// input existing Username and non-existent Pass\nawait driver.findElement(By.id(\"user-name\")).sendKeys(\"standard_user\");\nawait driver.findElement(By.id(\"password\")).sendKeys(\"non-existent pass\");\n//click Login button\nawait driver.findElement(By.id(\"login-button\")).click();\n\n//----Assertions----\n//--Assert1: Error is displayed with text \"Epic sadface: Username and password do not match any user in this service\"\nconst EXPECTED_ERROR = \"Epic sadface: Username and password do not match any user in this service\";\nconst ACTUAL_ERROR = await driver.findElement(By.css('[data-test=\"error\"]')).getText();\nassert.strictEqual(ACTUAL_ERROR, EXPECTED_ERROR);\n//close browser\nawait driver.quit();",
+              "err": {},
+              "uuid": "4a9123d1-2288-4504-b1a0-d224fea57937",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4a9123d1-2288-4504-b1a0-d224fea57937"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4090,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "8fd19d72-e735-449d-bb3e-f853eaca02ee",
+          "title": "Login page tests",
+          "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test5 - login username does not exist.js",
+          "file": "\\test\\Login page tests\\test5 - login username does not exist.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login with non-existent username and existing pass",
+              "fullTitle": "Login page tests login with non-existent username and existing pass",
+              "timedOut": null,
+              "duration": 4198,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n// input non-existent Username and existing Pass\nawait driver.findElement(By.id(\"user-name\")).sendKeys(\"non-existent username\");\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\");\n//click Login button\nawait driver.findElement(By.id(\"login-button\")).click();\n\n//----Assertions----\n//--Assert1: Error is displayed with text \"Epic sadface: Username and password do not match any user in this service\"\nconst EXPECTED_ERROR = \"Epic sadface: Username and password do not match any user in this service\";\nconst ACTUAL_ERROR = await driver.findElement(By.css('[data-test=\"error\"]')).getText();\nassert.strictEqual(ACTUAL_ERROR, EXPECTED_ERROR);\n//close browser\nawait driver.quit();",
+              "err": {},
+              "uuid": "0d4b70d5-02a1-4612-894f-ec2b30c908bf",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0d4b70d5-02a1-4612-894f-ec2b30c908bf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4198,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "22b2b3a3-fc15-4108-8285-c2c4a4efa1fb",
           "title": "Login page tests",
           "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test9 - password field is case sensitive.js",
           "file": "\\test\\Login page tests\\test9 - password field is case sensitive.js",
@@ -350,7 +350,7 @@
               "title": "username is case sensitive",
               "fullTitle": "Login page tests username is case sensitive",
               "timedOut": null,
-              "duration": 3136,
+              "duration": 4178,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -359,7 +359,7 @@
               "context": null,
               "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n// input Username and Password\nawait driver.findElement(By.id(\"user-name\")).sendKeys(\"standard_user\");\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_saucE\");\n//click Login button\nawait driver.findElement(By.id(\"login-button\")).click();\n//----Assertions----\n//--Assert1: URL is not changed\nconst EXPECTED_URL = \"https://www.saucedemo.com/\";\nconst ACTUAL_URL = await driver.getCurrentUrl();\nassert.strictEqual(ACTUAL_URL, EXPECTED_URL);\n//close browser\nawait driver.quit();",
               "err": {},
-              "uuid": "c73cf777-7393-46c3-a4e0-76d2f9bf1d4c",
+              "uuid": "6e482d0a-e425-45ba-8edc-1f3354a9b855",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -367,18 +367,18 @@
           ],
           "suites": [],
           "passes": [
-            "c73cf777-7393-46c3-a4e0-76d2f9bf1d4c"
+            "6e482d0a-e425-45ba-8edc-1f3354a9b855"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3136,
+          "duration": 4178,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
         },
         {
-          "uuid": "daf0e954-4170-4336-9a77-9f891d32c8c6",
+          "uuid": "06bdf348-3e92-41d7-a5a1-5f80d442df22",
           "title": "Login page tests",
           "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test7 - login after 3 failed attempts.js",
           "file": "\\test\\Login page tests\\test7 - login after 3 failed attempts.js",
@@ -389,7 +389,7 @@
               "title": "login after 3 failed login attempts",
               "fullTitle": "Login page tests login after 3 failed login attempts",
               "timedOut": null,
-              "duration": 3429,
+              "duration": 4592,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -398,7 +398,7 @@
               "context": null,
               "code": "// ----Execution Steps----\n// launch browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n//navigate to app\nawait driver.get(\"https://www.saucedemo.com/\");\n// input non-existent Username and existing Password 1st time\nlet usernameField = driver.findElement(By.id(\"user-name\"));\nlet passwordField = driver.findElement(By.id(\"password\"));\nawait usernameField.sendKeys(\"standard_user1\");\nawait passwordField.sendKeys(\"secret_sauce\");\n//click Login button\nlet loginButton = driver.findElement(By.id(\"login-button\"));\nawait loginButton.click();\n//--Assert1: URL is not changed\nconst EXPECTED_URL = \"https://www.saucedemo.com/inventory.html\";\nlet actualUrl = await driver.getCurrentUrl();\nassert.notEqual(actualUrl, EXPECTED_URL);\n//clear username\nawait usernameField.clear();\n  \n// input non-existent Username 2d time\nawait usernameField.sendKeys(\"standard_user2\");\n  \n//--Assert2: URL is not changed\nactualUrl = await driver.getCurrentUrl();\nassert.notEqual(actualUrl, EXPECTED_URL);\n//clear username\nawait usernameField.clear();\n// input non-existent Username 3d time\nawait usernameField.sendKeys(\"standard_user3\");\n//--Assert3: URL is not changed\nactualUrl = await driver.getCurrentUrl();\nassert.notEqual(actualUrl, EXPECTED_URL);\n//clear username\nawait usernameField.clear();\n// input existing Username \nawait usernameField.sendKeys(\"standard_user\");\n//click Login button\nawait loginButton.click();\n\n//--Assert3: URL is changed to https://www.saucedemo.com/inventory.html\nactualUrl = await driver.getCurrentUrl();\nassert.strictEqual(actualUrl, EXPECTED_URL);\n//close browser\nawait driver.quit();",
               "err": {},
-              "uuid": "d0036997-f109-470d-8765-ae0153780ddc",
+              "uuid": "fd0e3be4-524a-4ea1-b7ac-ac2a6d577050",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -406,12 +406,151 @@
           ],
           "suites": [],
           "passes": [
-            "d0036997-f109-470d-8765-ae0153780ddc"
+            "fd0e3be4-524a-4ea1-b7ac-ac2a6d577050"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3429,
+          "duration": 4592,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "9e30c307-d6fe-4d4d-b106-672980be8400",
+          "title": "Login page tests",
+          "fullFile": "C:\\Users\\Acer\\Desktop\\Automation first steps\\test\\Login page tests\\test0 - playing around with function nad parametrization.js",
+          "file": "\\test\\Login page tests\\test0 - playing around with function nad parametrization.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Succsess parametrized login with standard_user login",
+              "fullTitle": "Login page tests Succsess parametrized login with standard_user login",
+              "timedOut": null,
+              "duration": 4276,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"https://www.saucedemo.com/\");\nawait driver.findElement(By.id(\"user-name\")).sendKeys(userName);\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\");\nawait driver.findElement(By.id(\"login-button\")).click();\nconst EXPECTED_URL = \"https://www.saucedemo.com/inventory.html\";\nconst ACTUAL_URL = await driver.getCurrentUrl();\nassert.strictEqual(ACTUAL_URL, EXPECTED_URL);\nawait driver.quit();",
+              "err": {},
+              "uuid": "1fac51e9-e1f2-4190-ba3e-5037c0c60be2",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Succsess parametrized login with locked_out_user login",
+              "fullTitle": "Login page tests Succsess parametrized login with locked_out_user login",
+              "timedOut": null,
+              "duration": 1480,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"https://www.saucedemo.com/\");\nawait driver.findElement(By.id(\"user-name\")).sendKeys(userName);\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\");\nawait driver.findElement(By.id(\"login-button\")).click();\nconst EXPECTED_URL = \"https://www.saucedemo.com/inventory.html\";\nconst ACTUAL_URL = await driver.getCurrentUrl();\nassert.strictEqual(ACTUAL_URL, EXPECTED_URL);\nawait driver.quit();",
+              "err": {
+                "message": "AssertionError: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'https://www.saucedemo.com/'\n- 'https://www.saucedemo.com/inventory.html'\n                             ^",
+                "estack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'https://www.saucedemo.com/'\n- 'https://www.saucedemo.com/inventory.html'\n                             ^\n    at Context.<anonymous> (test\\Login page tests\\test0 - playing around with function nad parametrization.js:76:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+                "diff": "- https://www.saucedemo.com/\n+ https://www.saucedemo.com/inventory.html\n"
+              },
+              "uuid": "3ce73946-cfdc-411e-b4b0-b370e150bc78",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Succsess parametrized login with problem_user login",
+              "fullTitle": "Login page tests Succsess parametrized login with problem_user login",
+              "timedOut": null,
+              "duration": 1713,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"https://www.saucedemo.com/\");\nawait driver.findElement(By.id(\"user-name\")).sendKeys(userName);\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\");\nawait driver.findElement(By.id(\"login-button\")).click();\nconst EXPECTED_URL = \"https://www.saucedemo.com/inventory.html\";\nconst ACTUAL_URL = await driver.getCurrentUrl();\nassert.strictEqual(ACTUAL_URL, EXPECTED_URL);\nawait driver.quit();",
+              "err": {},
+              "uuid": "630e53f0-9d75-400d-a299-563848617529",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Succsess parametrized login with performance_glitch_user login",
+              "fullTitle": "Login page tests Succsess parametrized login with performance_glitch_user login",
+              "timedOut": null,
+              "duration": 6436,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"https://www.saucedemo.com/\");\nawait driver.findElement(By.id(\"user-name\")).sendKeys(userName);\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\");\nawait driver.findElement(By.id(\"login-button\")).click();\nconst EXPECTED_URL = \"https://www.saucedemo.com/inventory.html\";\nconst ACTUAL_URL = await driver.getCurrentUrl();\nassert.strictEqual(ACTUAL_URL, EXPECTED_URL);\nawait driver.quit();",
+              "err": {},
+              "uuid": "20e27216-947c-41c6-9f02-fa30781571d3",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Succsess parametrized login with error_user login",
+              "fullTitle": "Login page tests Succsess parametrized login with error_user login",
+              "timedOut": null,
+              "duration": 1387,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"https://www.saucedemo.com/\");\nawait driver.findElement(By.id(\"user-name\")).sendKeys(userName);\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\");\nawait driver.findElement(By.id(\"login-button\")).click();\nconst EXPECTED_URL = \"https://www.saucedemo.com/inventory.html\";\nconst ACTUAL_URL = await driver.getCurrentUrl();\nassert.strictEqual(ACTUAL_URL, EXPECTED_URL);\nawait driver.quit();",
+              "err": {},
+              "uuid": "e88a39b2-3399-40d6-a60e-5b6fd3bc6f5a",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Succsess parametrized login with visual_user login",
+              "fullTitle": "Login page tests Succsess parametrized login with visual_user login",
+              "timedOut": null,
+              "duration": 1430,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"https://www.saucedemo.com/\");\nawait driver.findElement(By.id(\"user-name\")).sendKeys(userName);\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\");\nawait driver.findElement(By.id(\"login-button\")).click();\nconst EXPECTED_URL = \"https://www.saucedemo.com/inventory.html\";\nconst ACTUAL_URL = await driver.getCurrentUrl();\nassert.strictEqual(ACTUAL_URL, EXPECTED_URL);\nawait driver.quit();",
+              "err": {},
+              "uuid": "83786312-fffc-4577-9674-877e24d8c9fe",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1fac51e9-e1f2-4190-ba3e-5037c0c60be2",
+            "630e53f0-9d75-400d-a299-563848617529",
+            "20e27216-947c-41c6-9f02-fa30781571d3",
+            "e88a39b2-3399-40d6-a60e-5b6fd3bc6f5a",
+            "83786312-fffc-4577-9674-877e24d8c9fe"
+          ],
+          "failures": [
+            "3ce73946-cfdc-411e-b4b0-b370e150bc78"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 16722,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
