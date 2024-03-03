@@ -1,0 +1,3 @@
+#ignore test report files
+mochawesome-report/testResults.html
+mochawesome-report/testResults.json

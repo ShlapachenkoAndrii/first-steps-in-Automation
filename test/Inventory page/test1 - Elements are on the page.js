@@ -4,7 +4,7 @@ const assert = require("assert");
 
 describe("Inventory page", function () {
 
-  //test1: check that elements are on the page
+  //test: check that elements are on the page
   it("elements are on the page", async function () {
     // ----Execution Steps----
     // launch browser
