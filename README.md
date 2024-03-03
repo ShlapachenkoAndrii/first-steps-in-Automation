@@ -8,7 +8,7 @@ using [youtube tutorial](https://www.youtube.com/playlist?list=PLZMWkkQEwOPl0udc
 
 test cases are in excel file 'test cases.xlsx'
 
-to run tests use in terminal from 'test' directory: npm test 
+to run tests use in terminal: npm test 
 
 this will run most tests in parallel, except paramentized login tests.
 
